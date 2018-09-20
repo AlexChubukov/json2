@@ -233,6 +233,7 @@ std::any& Json::operator[](const std::string& key) {
 		if (std::any_cast<std::string>(key_code[i]) == key)
 			return mean_code[i];
 	}
+	return mean_code[0];
 }
 
 std::any& Json::operator[](int index) {
