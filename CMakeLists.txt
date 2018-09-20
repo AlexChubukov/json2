@@ -16,3 +16,4 @@ add_executable(executable
 )
 find_package (Threads)
 target_link_libraries(executable -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(executable json)
