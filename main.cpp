@@ -5,7 +5,7 @@
 using json = nlohmann::json;
 
 int main() {
-	const char * const json_data = R"(
+	json json_data = R"(
 {
     "lastname" : "Ivanov",
     "firstname" : "Ivan",
@@ -18,5 +18,7 @@ int main() {
     	"city" : "Moscow",
         "street" : "Vozdvijenka"
     }
-})";
+})"_json;
+	
+	std::cout << json_data << std::endl;
 }
