@@ -12,7 +12,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -fsanitize=address -O1 -Wall 
 # enum your files
 add_library(json STATIC json.cpp json.hpp)
 add_executable(executable
-  test.cpp
+  main.cpp
 )
 find_package (Threads)
 target_link_libraries(executable -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
