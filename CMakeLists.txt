@@ -22,6 +22,6 @@ add_executable(main
   main.cpp
 )
 find_package (Threads)
-target_link_libraries(executable -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(test -fsanitize=address gtest ${CMAKE_THREAD_LIBS_INIT})
 target_link_libraries(test json_lib)
 target_link_libraries(main json_lib)
